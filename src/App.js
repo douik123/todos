@@ -59,7 +59,7 @@ function App() {
           
           <div className="buttons">
           {el.id === todoediting ? (
-            <button className="edit" onClick={() => submitEdits(el.id)}><MdOutlineDone/></button>
+            <button className="submit" onClick={() => submitEdits(el.id)}><MdOutlineDone/></button>
             ) : (
               <div>
               <button className="edit" onClick={()=>setTodoediting(el.id)}><AiFillEdit/></button>

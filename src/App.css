@@ -45,6 +45,11 @@
   margin: 0px 0px 0px 10px;
   padding: 10px;
 }
+.submit
+{
+  margin: 0px 0px 0px 10px;
+  padding: 10px;
+}
 .tabs
 {
   width: 200px;
@@ -58,4 +63,13 @@
 .buttons
 {
   display: flex;
+}
+.delete:hover {
+  background-color: red;
+}
+.edit:hover {
+  background-color:  #b0f2b6;
+}
+.submit:hover {
+  background-color: green;
 }
