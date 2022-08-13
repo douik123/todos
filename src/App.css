@@ -55,3 +55,7 @@
   margin: 0px 515px;
   
 }
+.buttons
+{
+  display: flex;
+}
