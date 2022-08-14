@@ -10,6 +10,7 @@
   background-color: #5c04bc;
   padding: 17px;
   color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 .common {
   width: 284px;
@@ -58,6 +59,7 @@
   background-color: white;
   box-shadow: 10px 10px 5px #aaaaaa;
   margin: 0px 515px;
+  font-family: serif;
   
 }
 .buttons
