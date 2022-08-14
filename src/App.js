@@ -10,6 +10,7 @@ function App() {
   // const [showEdit,setShowEdit] = useState(false);
   const [todoediting, setTodoediting] = useState(null);
   const [editingtext, seteditingtext] = useState("");
+ 
 
   const addNewTab=(e)=>{
     setTab([...tab,{task:input,id:uuidv4()}]);
@@ -47,13 +48,18 @@ function App() {
         </div>
         
           )}</>} */}
+          
           {tab.map(el=>
+             
         <div className="tabs">
           {todoediting===el.id ? 
-          (<input
-          type="text"
+          (<div>
+            <form name="nomformulaire" action="" method="POST">
+            <input
+          type="text" 
+          // value={el.task}
           onChange={(e)=>seteditingtext(e.target.value)}
-          />) 
+          /></form></div>) 
           :
           (<div><h3>{el.task}</h3></div>)}
           
@@ -66,11 +72,6 @@ function App() {
               <button className="delete" onClick={() => deleteTodo(el.id)} ><RiDeleteBin6Line/></button>
               </div>
             )}
-          
-          
-          
-          
-          
         </div>
         </div>
         
@@ -83,6 +84,7 @@ function App() {
 
 
      </div>
+    
     </div>
   );
 }
