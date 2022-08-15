@@ -4,6 +4,7 @@
 }
 .container{
   text-align: center;
+  padding-bottom: 30px;
 }
 .header
 {
@@ -12,13 +13,17 @@
   color: white;
   font-family: 'Courier New', Courier, monospace;
 }
+.bottom
+{
+  padding: 20px 0px 0px 0px;
+}
 .common {
   width: 284px;
   padding: 60px 150px;
   border: 1px solid #BFBFBF;
   background-color: white;
   box-shadow: 10px 10px 5px #aaaaaa;
-  margin: 0px 470px;
+  margin: auto;
 }
 .add
 {
@@ -28,6 +33,10 @@
   border-radius: 12px;
   padding: 10px;
   border: #5c04bc;
+}
+.todos
+{
+  padding: 25px 0px 0px 0px;
 }
 .tabs
 {
@@ -58,7 +67,7 @@
   border: 1px solid #BFBFBF;
   background-color: white;
   box-shadow: 10px 10px 5px #aaaaaa;
-  margin: 0px 515px;
+  margin: auto;
   font-family: serif;
   
 }

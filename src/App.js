@@ -14,6 +14,7 @@ function App() {
 
   const addNewTab=(e)=>{
     setTab([...tab,{task:input,id:uuidv4()}]);
+    document.getElementById('myInput').value = '';
   }
   function deleteTodo(id) {
     let updatedTodos = tab.filter((el) => el.id !== id);
@@ -33,11 +34,11 @@ function App() {
   return (
     <div className="container">
       <div className="header">Todo App</div>
-      <br></br>
-      <div>
-       <div className="common"><input type="text"  placeholder="Enter task" onChange={(e)=>setInput(e.target.value)}/><div><button className="add" onClick={addNewTab} >ADD</button></div></div> 
+
+      <div className=" bottom">
+       <div className="common"><input type="text"  placeholder="Enter task" id="myInput" onChange={(e)=>setInput(e.target.value)}/><div><button className="add" onClick={addNewTab} >ADD</button></div></div> 
        <div className="tableau">
-       <br></br>
+
        <div className="todos">
        {/* {showEdit ? <h1>Hello!</h1> :<> {tab.map(el=>
         <div className="tabs">
@@ -57,7 +58,7 @@ function App() {
             <form name="nomformulaire" action="" method="POST">
             <input
           type="text" 
-          // value={el.task}
+          value={editingtext}
           onChange={(e)=>seteditingtext(e.target.value)}
           /></form></div>) 
           :
@@ -68,7 +69,15 @@ function App() {
             <button className="submit" onClick={() => submitEdits(el.id)}><MdOutlineDone/></button>
             ) : (
               <div>
-              <button className="edit" onClick={()=>setTodoediting(el.id)}><AiFillEdit/></button>
+              <button 
+              className="edit" 
+              onClick={()=>{
+                setTodoediting(el.id);
+                seteditingtext(el.task);
+              }
+              }>
+                <AiFillEdit/>
+                </button>
               <button className="delete" onClick={() => deleteTodo(el.id)} ><RiDeleteBin6Line/></button>
               </div>
             )}
